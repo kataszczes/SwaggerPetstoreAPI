@@ -22,17 +22,19 @@ The available endpoints are as follows:
 ### GET/store/inventory
 Returns pet inventories by status.
 
-<!-- no toc -->#### Parameters
+
+#### Parameters
+
 No parameters.
 
-<!-- no toc -->#### Request example
+#### Request example
 ```
 curl -X 'GET' \
   'https://petstore.swagger.io/v2/store/inventory' \
   -H 'accept: application/json'
   ```
 
-<!-- no toc -->#### Response example
+#### Response example
 
 The response includes the information about 
 ```
@@ -53,14 +55,14 @@ The response includes the information about
 ### GET/store/order/{orderID}
 Finds purchase order by ID.
 
-<!-- no toc -->#### Parameters 
+#### Parameters 
 >Note: All the required fields are marked with an asterisk (*).
 
 | Parameters    | Description                                                                                                                                      | Type             | Default value |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ------------- |
 | **orderID** * | ID of a pet that needs to be fetched. Max 64 bit. To receive a valid response, input value from 1 to 10. Other values will  generate exceptions. | Integer ($int64) | N/A           |
 
-<!-- no toc -->#### Request example 
+#### Request example 
 
 ```
 curl -X 'GET' \
@@ -68,7 +70,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
-<!-- no toc -->#### Response example 
+#### Response example 
 
 The response includes the information about 
 ```
@@ -85,14 +87,14 @@ The response includes the information about
 ### POST/store/order
 Places an order for a pet.
 
-<!-- no toc -->#### Parameters 
+#### Parameters 
 >Note: All the required fields are marked with an asterisk (*).
 
 | Parameters | Description                        | Type   | Default value |
 | ---------- | ---------------------------------- | ------ | ------------- |
 | **body** * | Order placed for purchasing a pet. | object | N/A           |
 
-<!-- no toc -->#### Request example 
+#### Request example 
 
 ```
 curl -X 'POST' \
@@ -109,7 +111,7 @@ curl -X 'POST' \
 }'
 ```
 
-<!-- no toc -->#### Response example 
+#### Response example 
 
 The response includes the information about 
 ```
@@ -126,21 +128,21 @@ The response includes the information about
 ### DELETE/store/order/{orderID}
 Deletes purchase order by ID.
 
-<!-- no toc -->#### Parameters 
+#### Parameters 
 >Note: All the required fields are marked with an asterisk (*).
 
 | Parameters    | Description                                                                                                                                                                 | Type             | Default value |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------- |
 | **orderID** * | ID of the order that needs to be deleted. To receive a valid response, input a positive integer value. Negative or non-integer values will generate API errors. Max 64 bit. | integer ($int64) | N/A           |
 
-<!-- no toc -->#### Request example
+#### Request example
 ```
 curl -X 'DELETE' \
   'https://petstore.swagger.io/v2/store/order/1' \
   -H 'accept: application/json'
 ```
 
-<!-- no toc -->#### Response example
+#### Response example
 
 The response includes the information about 
 
